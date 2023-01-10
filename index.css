@@ -1,0 +1,159 @@
+header{
+
+width: 120px;
+height: 48px;
+
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.bot1, .bot2{
+    width: 30%;
+    height: 45px;
+    border-radius: 32px;
+    font-family: 'DM Sans', sans-serif;
+    border-color: #0A3871;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .3s;
+}
+.bot1{
+    color: #FFFFFF;
+    background-color: #0A3871;
+}
+
+.bot3{
+    position: absolute;
+    width: 144px;
+    height: 45px;
+    left: 1030px;
+    top: 575px;
+    cursor: pointer;
+
+    border-radius: 32px;
+    font-family: 'DM Sans', sans-serif;
+    border-color: #0A3871;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .3s;
+
+}
+
+button span {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    border-radius: 50%;
+    top: -50%;
+    left: -100%;
+    transition: .3s;
+}
+
+button:hover span {
+    left: -10%;
+}
+
+button:hover {
+    color: #c0e4da;
+    background: #06ced8;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .7);
+}
+
+
+.area{
+    font-family: 'DM Sans', sans-serif;
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    width: 60%;
+    height: 70%;
+    background: #F3F5FC;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+
+.resultado{
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    left: 950px;
+    top: 70px;
+    
+    /* White */
+    
+    background: #FFFFFF;
+    /* shadow */
+    
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    /*line-height: 300%;*/
+    color: #495057;
+    text-align: justify;
+    padding-inline: 30px;
+    font-size: 15px;
+    color: #0A3871;
+}
+
+
+.imagen img{
+    position:absolute;
+    width: 238px;
+    height: 222px;
+    left: 975px;
+    top: 100px;
+
+}
+
+.nm{
+    position:absolute;
+    width: 150px;
+    height: 200px;
+    left: 960px;
+    top: 350px;
+
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    padding-inline: 70px;
+    text-align: center;
+    
+
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    position: absolute;
+    width: 480px;
+    height: 67px;
+    left: 450px;
+    top: 555px;
+    cursor: pointer;
+}
+
+body{
+    background: #F3F5FC;
+}
+
+.ocultar{
+    display: none;
+}
+

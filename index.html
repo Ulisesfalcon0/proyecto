@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <img src="Logo.png">
+        </header>
+        
+        <textarea class="area" id = "texto" placeholder="Ingresa tu texto..."></textarea>
+
+        <div class = "botones">
+            <button class = "bot1" id = "botonDesencriptar">desencriptar</button>
+            <button class = "bot2" id = "botonEncriptar">encriptar</button>
+        </div>
+
+        <button class="bot3" id="botonCopiar">Copiar</button>
+		<br>
+        <textarea class="resultado" id = "textoresultado"></textarea>
+        <div class="imagen">
+            <img src="mu.png">
+        </div>
+        <div class="nm">
+            <h3>No se ha encontrado un mensaje</h3>
+        </div>
+		<script type = "text/javascript">
+            //<div class = "hola">ingresa el texto que deseas encriptar o desencriptar</div>
+
+
+
+            var muneco = document.querySelector(".imagen");
+            var numb = document.querySelector(".nm");
+            
+
+            function borrar (){
+                muneco.classList.add("ocultar");
+                numb.classList.add("ocultar");
+            }
+
+            function copiar(){
+                var texto = document.querySelector("#textoresultado")
+                texto.select();
+                document.execCommand("copy");
+            }
+            function desencriptar(){
+
+                var palabra = document.getElementById("texto").value.toLowerCase();
+                var divide = palabra.split('');
+                var cambio = "";
+                for (let i = 0;i<divide.length; i++){
+                    if (divide[i] == "i"){
+                        if (divide[i+1] =="m"){
+                            if (divide[i+2] == "e"){
+                                if (divide [i+3] == "s"){
+                                    divide [i+1] = "";
+                                    divide [i+2] = "";
+                                    divide [i+3] = "";
+                                }
+                            }
+                        }
+                    }
+                    else if (divide[i] == "e"){
+                        if (divide [i+1] == "n"){
+                            if (divide [i+2] == "t"){
+                                if (divide [i+3] == "e"){
+                                    if (divide [i+4] == "r"){
+                                        divide [i+1] = "";
+                                        divide [i+2] = "";
+                                        divide [i+3] = "";
+                                        divide [i+4] = "";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else if(divide[i] == "o"){
+                        if (divide [i+1]=="b"){
+                            if (divide [i+2]=="e"){
+                                if (divide [i+3]=="r"){
+                                    divide [i+1] = "";
+                                    divide [i+2] = "";
+                                    divide [i+3] = "";
+                                }
+                            }
+                        }
+                    }
+                    else if(divide[i] == "a"){
+                        if (divide[i+1] == "i"){
+                            divide [i+1] = "";
+                        }
+                    }
+                    else if (divide[i] == "u"){
+                        if (divide[i+1] == "f"){
+                            if (divide[i+2] == "a"){
+                                if (divide[i+3] == "t"){
+                                    divide [i+1] = "";
+                                    divide [i+2] = "";
+                                    divide [i+3] = "";
+                                }
+                            }
+                        }
+                    }
+                }
+                for (let i = 0;i<divide.length; i++){
+                     cambio = cambio + divide[i];
+                    }
+                    borrar();
+                document.getElementById("textoresultado").innerHTML = cambio;
+                    //document.write(cambio);
+            }
+
+            function encriptar(){
+
+                var palabra = document.getElementById("texto").value.toLowerCase();
+                var cambio = "";
+                var divide = palabra.split('');
+                for (let i = 0;i<divide.length; i++){
+                    if (divide[i] == "i"){
+                        divide[i] = "imes";
+                        //document.write("imes");
+                    }
+                    else if (divide[i] == "e"){
+                        divide[i] = "enter";
+                        //document.write("enter");
+                    }
+                    else if(divide[i] == "o"){
+                        divide[i] = "ober";
+                        //document.write("ober");
+                    }
+                    else if(divide[i] == "a"){
+                        divide[i] = "ai";
+                        //document.write("ai");
+                    }
+                    else if (divide[i] == "u"){
+                        divide[i] = "ufat";
+                        //document.write("ufat");
+                    }
+
+                }
+                for (let i = 0;i<divide.length; i++){
+                     cambio = cambio + divide[i];
+                    }
+                    borrar();
+                document.getElementById("textoresultado").innerHTML = cambio;
+        }
+
+
+            var btn = document.querySelector("#botonDesencriptar");
+            btn.onclick = desencriptar;
+
+            var btn1 = document.querySelector("#botonEncriptar");
+            btn1.onclick = encriptar;
+
+            var btn3 = document.querySelector("#botonCopiar");
+            btn3.onclick = copiar;
+
+        </script>
+    </body>    
+</html>
